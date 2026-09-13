@@ -81,13 +81,13 @@ const SkillCard = ({logo, name, proficiency }: { logo:string; name: string; prof
     <div className="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 p-3 bg-raised rounded-lg transition-all duration-300 hover:bg-raised/80">
       <div className="flex items-center min-w-0">
         <img src={logo} alt={`${name} logo`} className="w-8 h-8 object-contain flex-shrink-0"></img>
-        <span className="text-white font-medium px-3 min-w-0 break-words">{name}</span>
+        <span className="text-ink-bright font-medium px-3 min-w-0 break-words">{name}</span>
       </div>
       <span className={`text-sm px-2 py-1 rounded flex-shrink-0 whitespace-nowrap ml-auto ${
-        proficiency === 'Expert' ? 'bg-accent-muted/40 text-accent-bright' :
-        proficiency === 'Advanced' ? 'bg-accent-muted/25 text-accent' :
-        proficiency === 'Intermediate' ? 'bg-ember/30 text-ember-light' :
-        'bg-odysseus-taupe/40 text-parchment-dim'
+        proficiency === 'Expert' ? 'bg-patroclus-sage/60 text-ink-bright' :
+        proficiency === 'Advanced' ? 'bg-patroclus-pine/55 text-ink-link' :
+        proficiency === 'Intermediate' ? 'bg-patroclus-bark/60 text-ink-warm' :
+        'bg-patroclus-taupe/50 text-ink-muted'
       }`}>
         {proficiency}
       </span>
@@ -103,9 +103,9 @@ const Skills = () => {
     <section id="skills" ref={sectionRef} className="py-20 bg-deep relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Technical Skills</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-ink-bright mb-4">Technical Skills</h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
-          <p className="text-parchment-dim mt-6 max-w-2xl mx-auto">
+          <p className="text-ink-muted mt-6 max-w-2xl mx-auto">
             Proficient in industry-standard tools and technologies for data analysis, visualization, and insights generation.
           </p>
         </div>
@@ -119,7 +119,7 @@ const Skills = () => {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <h3 className="text-xl font-semibold text-white mb-6 border-b border-accent/20 pb-2">
+              <h3 className="text-xl font-semibold text-ink-bright mb-6 border-b border-accent/20 pb-2">
                 {category.title}
               </h3>
               <div className="space-y-3">

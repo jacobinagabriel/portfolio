@@ -28,7 +28,7 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-deep text-parchment font-sans">
+      <div className="min-h-screen bg-deep text-ink font-sans">
         <Navbar />
         <Routes>
           <Route path="/" element={<MainContent />} />

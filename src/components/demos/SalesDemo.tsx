@@ -10,14 +10,14 @@ const SalesDemo = () => {
       <div className="max-w-7xl mx-auto">
         <button
           onClick={() => navigate('/')}
-          className="flex items-center text-accent hover:text-white transition-colors mb-8"
+          className="flex items-center text-ink-link hover:text-ink-bright transition-colors mb-8"
         >
           <ArrowLeft size={20} className="mr-2" />
           Back to Portfolio
         </button>
 
         <div className="bg-surface rounded-lg p-6 shadow-xl">
-          <h1 className="text-3xl font-bold text-white mb-6">Sales Performance Dashboard</h1>
+          <h1 className="text-3xl font-bold text-ink-bright mb-6">Sales Performance Dashboard</h1>
           
           <div className="aspect-video w-full bg-raised rounded-lg overflow-hidden mb-8">
             <iframe
@@ -27,9 +27,9 @@ const SalesDemo = () => {
             />
           </div>
 
-          <div className="space-y-6 text-parchment">
+          <div className="space-y-6 text-ink">
             <div>
-              <h2 className="text-xl font-semibold text-white mb-2">Overview</h2>
+              <h2 className="text-xl font-semibold text-ink-bright mb-2">Overview</h2>
               <p>
                 This interactive dashboard provides real-time insights into our sales performance metrics.
                 Users can filter data by date range, product category, and region to analyze specific trends
@@ -38,7 +38,7 @@ const SalesDemo = () => {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-white mb-2">Key Features</h2>
+              <h2 className="text-xl font-semibold text-ink-bright mb-2">Key Features</h2>
               <ul className="list-disc list-inside space-y-2">
                 <li>Real-time sales metrics and KPIs</li>
                 <li>Interactive filters and drill-down capabilities</li>
@@ -49,12 +49,12 @@ const SalesDemo = () => {
             </div>
 
             <div>
-              <h2 className="text-xl font-semibold text-white mb-2">Technologies Used</h2>
+              <h2 className="text-xl font-semibold text-ink-bright mb-2">Technologies Used</h2>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">Tableau</span>
-                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">SQL</span>
-                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">Python</span>
-                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">Data Visualization</span>
+                <span className="px-3 py-1 bg-patroclus-bark/50 text-ink-warm rounded-full text-sm">Tableau</span>
+                <span className="px-3 py-1 bg-patroclus-bark/50 text-ink-warm rounded-full text-sm">SQL</span>
+                <span className="px-3 py-1 bg-patroclus-bark/50 text-ink-warm rounded-full text-sm">Python</span>
+                <span className="px-3 py-1 bg-patroclus-bark/50 text-ink-warm rounded-full text-sm">Data Visualization</span>
               </div>
             </div>
           </div>

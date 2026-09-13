@@ -8,41 +8,41 @@ export default {
         mono: ['Roboto Mono', 'monospace'],
       },
       colors: {
-        // "Odysseus — Greek Mythology" palette
-        // https://www.color-hex.com/color-palette/1084191
-        odysseus: {
-          taupe: '#574848',
-          steel: '#477298',
-          brick: '#7d2626',
-          maroon: '#660000',
-          navy: '#073763',
+        // "Patroclus — Greek Mythology" palette, the source for the whole site
+        // https://www.color-hex.com/color-palette/1084194
+        patroclus: {
+          taupe: '#4b4339',
+          bark: '#452518',
+          ochre: '#7f3100',
+          sage: '#4f5c48',
+          pine: '#0d2302',
         },
 
-        // Backgrounds, darkest to lightest
-        abyss: '#020f1d',
-        deep: '#05203a',
-        surface: '#073763',
-        raised: '#0e4a7f',
+        // Backgrounds, darkest to lightest. `deep` is patroclus.pine as it
+        // ships; `abyss` sinks it toward black and the two above it lift it
+        // toward patroclus.sage. The luminance steps match the navy ramp this
+        // replaces, so every depth relationship on the page is preserved.
+        abyss: '#061001',
+        deep: '#0d2302',
+        surface: '#293b1f',
+        raised: '#3d4c34',
 
-        // Interactive accent, lightened from the palette's steel blue so it
-        // stays readable on the navy backgrounds
-        accent: {
-          DEFAULT: '#8fb6d6',
-          bright: '#bdd7ec',
-          muted: '#477298',
-        },
+        // Interactive accent, lightened from patroclus.ochre so it can carry
+        // dark type as a fill and still read as a border against the greens
+        accent: '#d08544',
 
-        // Warm counterpoint, drawn from the palette's brick red
-        ember: {
-          DEFAULT: '#7d2626',
-          light: '#e0a9a9',
-        },
-
-        // Body copy, tinted with the palette's taupe
-        parchment: {
-          DEFAULT: '#c9bcbc',
-          dim: '#a89898',
-          faint: '#7e6e6e',
+        // Type scale. Every entry is one Patroclus hue lightened until it
+        // clears WCAG AA on the backgrounds above — the palette itself is
+        // near-black, so its raw values are unreadable as text. `inverse` is
+        // the exception: it sits on the accent fill, so it keeps the raw hex.
+        ink: {
+          bright: '#f0e7d9',  // headings         <- patroclus.taupe
+          DEFAULT: '#cfc4b4', // body copy        <- patroclus.taupe
+          muted: '#b8c4ae',   // secondary copy   <- patroclus.sage
+          faint: '#8d9a83',   // legal, meta      <- patroclus.pine
+          link: '#eda468',    // links, nav       <- patroclus.ochre
+          warm: '#e0b49c',    // tag chips        <- patroclus.bark
+          inverse: '#0d2302', // type on the accent fill, unmodified
         },
       },
       transitionProperty: {
