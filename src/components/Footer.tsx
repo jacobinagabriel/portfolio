@@ -12,10 +12,10 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-6">
-            <a href="https://github.com/gabriel-jacobina" target="_blank" rel="noopener noreferrer" className="text-ink-muted hover:text-ink-link transition-colors">
+            <a href="https://github.com/jacobinagabriel" target="_blank" rel="noopener noreferrer" className="text-ink-muted hover:text-ink-link transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://www.linkedin.com/in/gabriel-jacobina/" target="_blank" rel="noopener noreferrer" className="text-ink-muted hover:text-ink-link transition-colors">
+            <a href="https://www.linkedin.com/in/jacobinagabriel" target="_blank" rel="noopener noreferrer" className="text-ink-muted hover:text-ink-link transition-colors">
               <Linkedin size={20} />
             </a>
             <a href="mailto:gabriel.jacobina@gmail.com" className="text-ink-muted hover:text-ink-link transition-colors">

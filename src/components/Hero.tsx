@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
+  const introRef = useRef<HTMLParagraphElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
@@ -12,6 +13,9 @@ const Hero = () => {
     }
 
     setTimeout(() => {
+      if (introRef.current) {
+        introRef.current.classList.add('animate-fade-in');
+      }
       if (subtitleRef.current) {
         subtitleRef.current.classList.add('animate-fade-in');
       }
@@ -34,33 +38,36 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 relative">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-8">
-            <p className="text-ink-link font-mono opacity-0 transition-opacity duration-1000" ref={subtitleRef}>Hi, my name is</p>
+            <p className="text-ink-link font-mono opacity-0 transition-opacity duration-1000" ref={introRef}>Hi, my name is</p>
             <h1 className="text-4xl md:text-6xl font-bold text-ink-bright leading-tight opacity-0 transition-opacity duration-1000" ref={titleRef}>
               <span className="block">Gabriel Jacobina</span>
-              <span className="block text-ink-muted mt-2">Data Analyst</span>
+              <span className="block text-ink-muted mt-2">Data Engineer</span>
             </h1>
 
             <p className="text-ink-muted text-lg max-w-xl opacity-0 transition-opacity duration-1000" ref={subtitleRef}>
-              I transform complex data into actionable insights. Specializing in data visualization, statistical analysis, and machine learning to help organizations make data-driven decisions.
+              AWS &amp; dbt certified data engineer at GCB Investimentos, building scalable data solutions.
+              Three years in the financial sector, an engineering degree from USP and a postgraduate degree in
+              data engineering from FIAP. I own the group's data lake and data warehouse on AWS, and brought in
+              dbt to build the governed layer the business reports from.
             </p>
 
-            <div className="pt-4 opacity-0 transition-opacity duration-1000" ref={ctaRef}>
+            <div className="pt-4 flex flex-wrap items-center gap-4 opacity-0 transition-opacity duration-1000" ref={ctaRef}>
               <button
                 className="group bg-transparent hover:bg-accent/10 text-ink-link border border-accent px-6 py-3 rounded-md transition-all duration-300 flex items-center space-x-2"
               >
                 <a
-                  href="/assets/cv_gabriel-jacobina.pdf"
-                  download="cv_gabriel-jacobina.pdf"
+                  href="https://jacobinagabriel.github.io/resume/gabriel-jacobina.pdf"
+                  download="gabriel-jacobina.pdf"
                   className="flex items-center space-x-2"
                 >
                   Download CV
                 </a>
               </button>
               <button
-                onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })}
                 className="group bg-transparent hover:bg-accent/10 text-ink-link border border-accent px-6 py-3 rounded-md transition-all duration-300 flex items-center space-x-2"
               >
-                View My Projects
+                View My Skills
                 <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
               </button>
             </div>
