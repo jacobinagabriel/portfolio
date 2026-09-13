@@ -3,6 +3,7 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const titleRef = useRef<HTMLHeadingElement>(null);
+  const greetingRef = useRef<HTMLParagraphElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
 
@@ -12,6 +13,9 @@ const Hero = () => {
     }
 
     setTimeout(() => {
+      if (greetingRef.current) {
+        greetingRef.current.classList.add('animate-fade-in');
+      }
       if (subtitleRef.current) {
         subtitleRef.current.classList.add('animate-fade-in');
       }
@@ -34,7 +38,7 @@ const Hero = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10 relative">
         <div className="grid md:grid-cols-2 gap-10 items-center">
           <div className="space-y-8">
-            <p className="text-ink-link font-mono opacity-0 transition-opacity duration-1000" ref={subtitleRef}>Hi, my name is</p>
+            <p className="text-ink-link font-mono opacity-0 transition-opacity duration-1000" ref={greetingRef}>Hi, my name is</p>
             <h1 className="text-4xl md:text-6xl font-bold text-ink-bright leading-tight opacity-0 transition-opacity duration-1000" ref={titleRef}>
               <span className="block">Gabriel Jacobina</span>
               <span className="block text-ink-muted mt-2">Data Analyst</span>
