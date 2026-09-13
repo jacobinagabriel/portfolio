@@ -10,16 +10,16 @@ const SalesDemo = () => {
       <div className="max-w-7xl mx-auto">
         <button
           onClick={() => navigate('/')}
-          className="flex items-center text-[#64FFDA] hover:text-white transition-colors mb-8"
+          className="flex items-center text-accent hover:text-white transition-colors mb-8"
         >
           <ArrowLeft size={20} className="mr-2" />
           Back to Portfolio
         </button>
 
-        <div className="bg-[#112240] rounded-lg p-6 shadow-xl">
+        <div className="bg-surface rounded-lg p-6 shadow-xl">
           <h1 className="text-3xl font-bold text-white mb-6">Sales Performance Dashboard</h1>
           
-          <div className="aspect-video w-full bg-[#1D3461] rounded-lg overflow-hidden mb-8">
+          <div className="aspect-video w-full bg-raised rounded-lg overflow-hidden mb-8">
             <iframe
               src="https://datastudio.google.com/embed/reporting/1234567890/page/1"
               className="w-full h-full border-0"
@@ -27,7 +27,7 @@ const SalesDemo = () => {
             />
           </div>
 
-          <div className="space-y-6 text-gray-300">
+          <div className="space-y-6 text-parchment">
             <div>
               <h2 className="text-xl font-semibold text-white mb-2">Overview</h2>
               <p>
@@ -51,10 +51,10 @@ const SalesDemo = () => {
             <div>
               <h2 className="text-xl font-semibold text-white mb-2">Technologies Used</h2>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-[#1E3A8A] text-blue-300 rounded-full text-sm">Tableau</span>
-                <span className="px-3 py-1 bg-[#1E3A8A] text-blue-300 rounded-full text-sm">SQL</span>
-                <span className="px-3 py-1 bg-[#1E3A8A] text-blue-300 rounded-full text-sm">Python</span>
-                <span className="px-3 py-1 bg-[#1E3A8A] text-blue-300 rounded-full text-sm">Data Visualization</span>
+                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">Tableau</span>
+                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">SQL</span>
+                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">Python</span>
+                <span className="px-3 py-1 bg-ember/25 text-ember-light rounded-full text-sm">Data Visualization</span>
               </div>
             </div>
           </div>
