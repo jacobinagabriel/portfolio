@@ -82,7 +82,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
   return (
     <div
       ref={cardRef}
-      className={`bg-[#112240] rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+      className={`bg-surface rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
     >
       <div className="relative">
         <img
@@ -90,16 +90,16 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
           alt={project.title}
           className="w-full h-48 object-cover transition-transform duration-500 ease-out hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#112240] to-transparent opacity-70"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-surface to-transparent opacity-70"></div>
       </div>
 
       <div className="p-6">
         <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
-        <p className="text-gray-400 mb-4">{project.description}</p>
+        <p className="text-parchment-dim mb-4">{project.description}</p>
 
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tags.map((tag, index) => (
-            <span key={index} className="text-xs bg-[#1E3A8A] text-blue-300 px-2 py-1 rounded-full">
+            <span key={index} className="text-xs bg-ember/25 text-ember-light px-2 py-1 rounded-full">
               {tag}
             </span>
           ))}
@@ -111,7 +111,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
             onClick={(e) => handleDemoClick(e, project.demoLink)}
             target={project.isInternalDemo ? undefined : "_blank"}
             rel={project.isInternalDemo ? undefined : "noopener noreferrer"}
-            className="text-[#64FFDA] hover:text-white flex items-center space-x-1 transition-colors"
+            className="text-accent hover:text-white flex items-center space-x-1 transition-colors"
           >
             <span>Live Demo</span>
             <ExternalLink size={14} />
@@ -121,7 +121,7 @@ const ProjectCard = ({ project }: { project: typeof projects[0] }) => {
             href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#64FFDA] hover:text-white flex items-center space-x-1 transition-colors"
+            className="text-accent hover:text-white flex items-center space-x-1 transition-colors"
           >
             <span>Code</span>
             <Github size={14} />
@@ -141,12 +141,12 @@ const Projects = () => {
     : projects.filter(project => project.category === filter);
 
   return (
-    <section id="projects" ref={sectionRef} className="py-20 bg-[#080F1E] relative">
+    <section id="projects" ref={sectionRef} className="py-20 bg-abyss relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
-          <div className="w-20 h-1 bg-[#64FFDA] mx-auto"></div>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-accent mx-auto"></div>
+          <p className="text-parchment-dim mt-6 max-w-2xl mx-auto">
             A selection of my recent data analysis and visualization projects. Each represents unique challenges and insights.
           </p>
         </div>
@@ -154,25 +154,25 @@ const Projects = () => {
         <div className="flex justify-center flex-wrap gap-4 mb-12">
           <button
             onClick={() => setFilter('all')}
-            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'all' ? 'bg-[#64FFDA] text-[#0A192F] font-medium' : 'bg-[#112240] text-gray-300 hover:bg-[#1D3461]'}`}
+            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'all' ? 'bg-accent text-deep font-medium' : 'bg-surface text-parchment hover:bg-raised'}`}
           >
             All Projects
           </button>
           <button
             onClick={() => setFilter('data-analysis')}
-            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'data-analysis' ? 'bg-[#64FFDA] text-[#0A192F] font-medium' : 'bg-[#112240] text-gray-300 hover:bg-[#1D3461]'}`}
+            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'data-analysis' ? 'bg-accent text-deep font-medium' : 'bg-surface text-parchment hover:bg-raised'}`}
           >
             Data Analysis
           </button>
           <button
             onClick={() => setFilter('visualization')}
-            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'visualization' ? 'bg-[#64FFDA] text-[#0A192F] font-medium' : 'bg-[#112240] text-gray-300 hover:bg-[#1D3461]'}`}
+            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'visualization' ? 'bg-accent text-deep font-medium' : 'bg-surface text-parchment hover:bg-raised'}`}
           >
             Visualization
           </button>
           <button
             onClick={() => setFilter('machine-learning')}
-            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'machine-learning' ? 'bg-[#64FFDA] text-[#0A192F] font-medium' : 'bg-[#112240] text-gray-300 hover:bg-[#1D3461]'}`}
+            className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${filter === 'machine-learning' ? 'bg-accent text-deep font-medium' : 'bg-surface text-parchment hover:bg-raised'}`}
           >
             Machine Learning
           </button>
