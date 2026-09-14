@@ -39,16 +39,17 @@ const Navbar = () => {
             <div className="ml-4 flex items-center space-x-4">
               <button onClick={() => scrollToSection('hero')} className="text-ink hover:text-ink-link transition-colors px-3 py-2">Home</button>
               <button onClick={() => scrollToSection('skills')} className="text-ink hover:text-ink-link transition-colors px-3 py-2">Skills</button>
+              <button onClick={() => scrollToSection('certifications')} className="text-ink hover:text-ink-link transition-colors px-3 py-2">Certifications</button>
               <button onClick={() => scrollToSection('projects')} className="text-ink hover:text-ink-link transition-colors px-3 py-2">Projects</button>
             </div>
           </div>
           
           {/* Social links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://github.com/gabriel-jacobina/" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link transition-colors">
+            <a href="https://github.com/jacobinagabriel" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link transition-colors">
               <Github size={27} />
             </a>
-            <a href="https://linkedin.com/in/gabriel-jacobina/" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link transition-colors">
+            <a href="https://www.linkedin.com/in/jacobinagabriel" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link transition-colors">
               <Linkedin size={27} />
             </a>
           </div>
@@ -70,13 +71,14 @@ const Navbar = () => {
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-surface shadow-xl">
           <button onClick={() => scrollToSection('hero')} className="block w-full text-left text-ink hover:text-ink-link px-3 py-2 rounded-md">Home</button>
           <button onClick={() => scrollToSection('skills')} className="block w-full text-left text-ink hover:text-ink-link px-3 py-2 rounded-md">Skills</button>
+          <button onClick={() => scrollToSection('certifications')} className="block w-full text-left text-ink hover:text-ink-link px-3 py-2 rounded-md">Certifications</button>
           <button onClick={() => scrollToSection('projects')} className="block w-full text-left text-ink hover:text-ink-link px-3 py-2 rounded-md">Projects</button>
           
           <div className="flex space-x-4 px-3 py-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link">
+            <a href="https://github.com/jacobinagabriel" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link">
+            <a href="https://www.linkedin.com/in/jacobinagabriel" target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ink-link">
               <Linkedin size={20} />
             </a>
           </div>

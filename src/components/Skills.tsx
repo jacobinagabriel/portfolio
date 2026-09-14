@@ -3,27 +3,27 @@ import { useInView } from '../hooks/useInView';
 
 const skillCategories = [
   {
-    title: 'Data Analysis & Visualization',
+    title: 'Tools & Platforms',
     skills: [
       {
-        name: 'Metabase',
+        name: 'AWS',
         proficiency: 'Expert',
-        logo: "/assets/metabase-icon.svg"
+        logo: '/assets/amazon_aws-icon.svg'
       },
       {
-        name: 'Power BI',
+        name: 'dbt',
+        proficiency: 'Expert',
+        logo: '/assets/dbt-icon.svg'
+      },
+      {
+        name: 'Terraform',
         proficiency: 'Advanced',
-        logo: '/assets/power-bi-icon.svg'
+        logo: '/assets/infrastructure-generic.svg'
       },
       {
-        name: 'Superset',
+        name: 'Git',
         proficiency: 'Intermediate',
-        logo: '/assets/apache-superset-icon.svg'
-      },
-      {
-        name: 'Looker',
-        proficiency: 'Beginner',
-        logo: '/assets/looker-icon.svg'
+        logo: '/assets/git-scm-icon.svg'
       }
     ]
   },
@@ -31,9 +31,9 @@ const skillCategories = [
     title: 'Programming & Databases',
     skills: [
       {
-        name: 'SQL',
+        name: 'SQL / PostgreSQL',
         proficiency: 'Expert',
-        logo: '/assets/sql-database-generic.svg'
+        logo: '/assets/postgresql-icon.svg'
       },
       {
         name: 'Python',
@@ -53,22 +53,32 @@ const skillCategories = [
     ]
   },
   {
-    title: 'Tools & Platforms',
+    title: 'Analytics & BI',
     skills: [
       {
-        name: 'Hubspot',
+        name: 'Metabase',
+        proficiency: 'Expert',
+        logo: '/assets/metabase-icon.svg'
+      },
+      {
+        name: 'HubSpot',
         proficiency: 'Expert',
         logo: '/assets/hubspot-icon.svg'
       },
       {
-        name: 'Git',
-        proficiency: 'Intermediate',
-        logo: '/assets/git-scm-icon.svg'
+        name: 'Power BI',
+        proficiency: 'Advanced',
+        logo: '/assets/power-bi-icon.svg'
       },
       {
-        name: 'AWS/GCP',
+        name: 'Superset',
+        proficiency: 'Intermediate',
+        logo: '/assets/apache-superset-icon.svg'
+      },
+      {
+        name: 'Looker',
         proficiency: 'Beginner',
-        logo: '/assets/amazon_aws-icon.svg'
+        logo: '/assets/looker-icon.svg'
       }
     ]
   }
@@ -100,13 +110,13 @@ const Skills = () => {
   const isVisible = useInView(sectionRef, { threshold: 0.1 });
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-deep relative">
+    <section id="skills" ref={sectionRef} className="py-20 bg-abyss relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-ink-bright mb-4">Technical Skills</h2>
           <div className="w-20 h-1 bg-accent mx-auto"></div>
           <p className="text-ink-muted mt-6 max-w-2xl mx-auto">
-            Proficient in industry-standard tools and technologies for data analysis, visualization, and insights generation.
+            The stack I build on day to day — cloud infrastructure and transformation first, then the languages and the tools the business reads the data through.
           </p>
         </div>
         
