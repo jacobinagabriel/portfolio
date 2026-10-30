@@ -168,17 +168,23 @@ const GAP = 6;
 const Honeycomb = ({ certifications }: { certifications: Certification[] }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(1000);
+  const [viewportWidth, setViewportWidth] = useState(1280);
 
   useLayoutEffect(() => {
     const element = containerRef.current;
     if (!element) return;
-    setContainerWidth(element.clientWidth);
-    const observer = new ResizeObserver(([entry]) => setContainerWidth(entry.contentRect.width));
+    const measure = (width: number) => {
+      setContainerWidth(width);
+      setViewportWidth(window.innerWidth);
+    };
+    measure(element.clientWidth);
+    const observer = new ResizeObserver(([entry]) => measure(entry.contentRect.width));
     observer.observe(element);
     return () => observer.disconnect();
   }, []);
 
-  const width = containerWidth < 560 ? 104 : 128;
+  // One tile size per viewport so side-by-side tracks match
+  const width = viewportWidth < 640 ? 104 : 128;
   const height = (width * 2) / Math.sqrt(3);
   const pitchX = width + GAP;
   const pitchY = (pitchX * Math.sqrt(3)) / 2;
@@ -229,7 +235,7 @@ const Certifications = () => {
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="grid gap-8 lg:grid-cols-[4fr_7fr]">
           {tracks.map((track, index) => {
             const earnedCount = track.certifications.filter((certification) => certification.validity).length;
 
@@ -237,6 +243,8 @@ const Certifications = () => {
               <div
                 key={track.name}
                 className={`bg-surface p-4 sm:p-6 rounded-lg shadow-lg transition-all duration-500 ${
+                  track.name === 'AWS' ? 'lg:col-span-2' : ''
+                } ${
                   isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                 }`}
                 style={{ transitionDelay: `${index * 150}ms` }}
